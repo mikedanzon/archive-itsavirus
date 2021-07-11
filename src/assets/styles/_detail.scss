@@ -1,0 +1,289 @@
+.detail-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  .d-shoes {
+    display: flex;
+
+    .d-shoes-left {
+      .d-shoes-cover {
+        img {
+          height: auto;
+          width: 420px;
+          object-fit: cover;
+        }
+      }
+
+      .d-shoes-images {
+        display: flex;
+
+        .s-images {
+          padding-top: 10px;
+          padding-right: 10px;
+        }
+
+        img {
+          height: auto;
+          width: 90px;
+          object-fit: cover;
+        }
+
+        :hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .d-shoes-right {
+      padding-left: 100px;
+      padding-top: 50px;
+
+      .d-right-category {
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        font-size: 16px;
+      }
+
+      .d-right-name {
+        text-transform: uppercase;
+        font-size: 50px;
+        font-weight: bold;
+        padding-bottom: 30px;
+      }
+
+      .d-right-desc {
+        width: 400px;
+        font-size: 16px;
+        padding-bottom: 30px;
+      }
+
+      .d-right-video {
+        display: flex;
+
+        .d-right-video-player {
+          padding-right: 15px;
+          padding-bottom: 30px;
+
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+
+        .d-right-video-text {
+          font-size: 16px;
+        }
+      }
+
+      .d-right-size {
+        padding-bottom: 30px;
+
+        .d-right-size-text {
+          font-size: 16px;
+        }
+
+        .d-right-size-select {
+          display: flex;
+          flex-flow: row wrap;
+          flex-direction: row;
+          padding-top: 15px;
+
+          :hover {
+            cursor: pointer;
+          }
+
+          .shoes-sizes {
+            text-align: center;
+            flex-basis: 20%;
+            border: 1px solid rgb(216, 216, 216);
+            padding-bottom: 10px;
+            padding-top: 10px;
+
+            &:hover {
+              border: 2px solid black;
+            }
+          }
+        }
+      }
+
+      .d-right-color {
+        padding-bottom: 30px;
+
+        .d-right-color-text {
+          font-size: 16px;
+        }
+
+        .d-right-color-select {
+          display: flex;
+          padding-top: 10px;
+          padding-bottom: 10px;
+
+          .shoes-color {
+            height: 40px;
+            width: 40px;
+            border: 1px solid white;
+            border-radius: 20px;
+            margin-right: 5px;
+
+            &:hover {
+              border: 2px solid black;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .d-footer {
+    display: flex;
+    background: #f6f6f6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+    height: 92px;
+    align-items: center;
+    justify-content: space-between;
+
+    .d-footer-left {
+      margin-left: 30px;
+      font-size: 12px;
+    }
+
+    .d-footer-right {
+      margin-right: 30px;
+
+      button {
+        padding: 7px;
+        background: black;
+        color: white;
+        border: none;
+        border: 1px solid black;
+        border-radius: 2px;
+
+        &:hover {
+          border: 2px solid black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 730px) and (max-width: 1030px) {
+    .d-shoes {
+      .d-shoes-left {
+        .d-shoes-cover {
+          img {
+            width: 300px !important;
+          }
+        }
+
+        .d-shoes-images {
+          img {
+            width: 60px !important;
+          }
+        }
+      }
+
+      .d-shoes-right {
+        padding-left: 50px !important;
+
+        .d-right-name {
+          font-size: 35px !important;
+        }
+
+        .d-right-desc {
+          width: 300px !important;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 730px) {
+    text-align: center;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+
+    .d-shoes {
+      display: block !important;
+
+      .d-shoes-left {
+        .d-shoes-cover {
+          img {
+            width: 300px !important;
+          }
+        }
+
+        .d-shoes-images {
+          justify-content: center;
+
+          img {
+            width: 70px !important;
+          }
+        }
+      }
+
+      .d-shoes-right {
+        padding-left: 0px !important;
+
+        .d-right-name {
+          font-size: 40px !important;
+        }
+
+        .d-right-desc {
+          width: 100%;
+        }
+
+        .d-right-video {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          justify-content: center;
+        }
+
+        .d-right-size {
+          .d-right-size-text {
+            padding-bottom: 10px;
+          }
+
+          .d-right-size-select {
+            justify-content: center;
+
+            .shoes-sizes {
+              flex-basis: 25% !important;
+            }
+          }
+        }
+
+        .d-right-color {
+          padding-top: 20px;
+
+          .d-right-color-text {
+            padding-bottom: 10px;
+          }
+
+          .d-right-color-select {
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .d-footer {
+      display: block !important;
+      height: 100% !important;
+      padding: 30px 10px;
+
+      .d-footer-left {
+        margin-left: 0px !important;
+        padding-bottom: 20px;
+      }
+
+      .d-footer-right {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+      }
+    }
+  }
+}

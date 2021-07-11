@@ -1,0 +1,49 @@
+.htop-background {
+  background: #f5f5f5;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  .htop-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .htop-left {
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    .htop-middle {
+      padding-left: 140px;
+    }
+
+    .htop-right {
+      display: flex;
+
+      :hover {
+        cursor: pointer;
+      }
+
+      .right-menu-1 {
+        padding-right: 25px;
+      }
+
+      .right-menu-2 {
+        padding-right: 25px;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    .htop-middle {
+      display: none;
+    }
+  }
+}

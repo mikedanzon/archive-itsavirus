@@ -1,13 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './App.jsx';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import { applyMiddleware, createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import reportWebVitals from './reportWebVitals';
+import thunk from 'redux-thunk';
+import reducers from './redux/reducers/index.js';
+
+const middleware = [thunk];
+
+const devTools =
+  process.env.NODE_ENV === 'production'
+    ? applyMiddleware(...middleware)
+    : composeWithDevTools(applyMiddleware(...middleware));
+
+const store = createStore(reducers, devTools);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 
